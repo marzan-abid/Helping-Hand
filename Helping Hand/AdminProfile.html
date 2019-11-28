@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Helping Hand</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <meta content="Author" name="WebThemez">
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+    <style>/*CardView*/
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          transition: 0.3s;
+          width: 40%;
+          border-radius: 25px;
+        }
+
+        .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        img {
+          border-radius: 15px 15px 0 0;
+        }
+
+        .container {
+          padding: 16px 16px;
+        }
+</style>
+
+
+</head>
+<script src ="js/Observer.js"></script>
+<script src ="js/Newapplication.js"></script>
+
+<script src ="js/Signout.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB_I96MQ_xl2jTzuYYsjlUXngMFwhetRhE",
+    authDomain: "helpinghand-6a390.firebaseapp.com",
+    databaseURL: "https://helpinghand-6a390.firebaseio.com",
+    projectId: "helpinghand-6a390",
+    storageBucket: "helpinghand-6a390.appspot.com",
+    messagingSenderId: "574498895731"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<body id="body">
+
+  <!--==========================
+    Top Bar
+  ============================-->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="fa fa-envelope-o"></i> <a href="mailto:helpinghand243035@gmail.com">helpinghand243035@gmail.com</a>
+        <i class="fa fa-phone"></i> +8801688500075
+      </div>
+      <div class="social-links float-right">
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto"><span>Helping </span>Hand</a></h1>
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="portfolio.html">Gallery</a></li>
+          <li><a href="applications.html">applications</a></li>
+
+
+          <li><a href="#" data-toggle="modal" data-target="#userNewApplication" class="btn btn-blue">New application </a></li>
+
+
+
+          <li>
+          <div class="dropdown">
+		  <button id="signLabel" class="form-control form-white dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Previous Application
+		  </button>
+            <ul class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="dLabel">
+
+			<li class="animated lightSpeedIn"><a href="#" data-toggle="modal" data-target="#userPreviousSubmittedApplication" class="btn btn-blue">Submitted Applications</a></li>
+			<li class="animated lightSpeedIn"><a href="#" data-toggle="modal" data-target="#editApplication" class="btn btn-blue">Draft Applications</a></li>
+		</ul>
+	</div>
+	</li>
+
+
+          <li><a id='headerName'></a></li>
+          <li><a href="index.html" id='sout' onclick = "log_out();">Sign Out</a></li>
+
+
+
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+
+    <div class="intro-content">
+      <h2><span>Inspire</span><br>Success is not final; failure is not fatal</h2>
+      <div>
+        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </div>
+    <div class="item" style="background-image: url('img/intro-carousel/1.jpg');"></div>
+  </section><!-- #intro -->
+
+   <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about" class="wow fadeInUp">
+      <div class="container">
+	    <div class="section-header">
+          <h2>Welcome</h2>
+          <p>“Helping Hand” is mainly a reliable fundrising platform for both donation and  seeking help.
+              It's main goal is to Make Fundraising easier and quicker, to encourage Donation massively by
+              providing reliable platform for donating. </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 about-img">
+              <img src="img/Undraw/bricks.svg" alt="">
+          </div>
+
+          <div class="col-lg-6 content">
+            <h2> We will verify the people who seek help. So that, no one gets cheated. </h2>
+            <h3>As the main reason for people to refuse to donate is reliability, our main concern would be that. </h3>
+			<p>The main motivation behind 'Helping Hand' : </p>
+            <ul>
+              <li><i class="icon ion-ios-checkmark-outline"></i> Digitializing this fund raising process.</li>
+              <li><i class="icon ion-ios-checkmark-outline"></i> Needs less volunteers.</li>
+              <li><i class="icon ion-ios-checkmark-outline"></i> Doesn’t take any percentage.</li>
+              <li><i class="icon ion-ios-checkmark-outline"></i> Ensures the validity of the news and source.</li>
+              <li><i class="icon ion-ios-checkmark-outline"></i> Can reach more people in some organized way and in shorter time)</li>
+
+
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #about -->
+ <!--==========================
+      Events Section
+    ============================-->
+      <section id="events" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Running Events</h2>
+          <p>Running events where you can donate....</p>
+        </div>
+        <div class="owl-carousel testimonials-carousel">
+
+
+            <div class="card" style="width: 250px; ">
+              <img src="img/team1.jpg" alt="Avatar" style="width: 50% ; "height= 80%">
+              <div class="container">
+                <h4><b>Jane Doe</b></h4>
+                <p>This is description of the event.This is description of the event.This is description of the event.This is description of the event.</p>
+              </div>
+                <button href="palash.html" style="color: black;font-size: large; border-radius: 10%; background: #00b1e4; padding: 10px 20px; margin-bottom: 20px; margin-left: 15%; margin-right:15% " >Details</button>
+            </div>
+
+            <div class="card" style="width: 250px; ">
+              <img src="img/team2.jpg" alt="Avatar" style="width: 50% ; "height= 80%">
+              <div class="container">
+                <h4><b>Jane Doe</b></h4>
+                <p>This is description of the event.This is description of the event.This is description of the event.This is description of the event.</p>
+              </div>
+                <button href="palash.html" style="color: black;font-size: large; border-radius: 10%; background: #00b1e4; padding: 10px 20px; margin-bottom: 20px; margin-left: 15%; margin-right:15% " >Details</button>
+            </div>
+            <div class="card" style="width: 250px; ">
+              <img src="img/team3.jpg" alt="Avatar" style="width: 50% ; "height= 80%">
+              <div class="container">
+                <h4><b>Jane Doe</b></h4>
+                <p>This is description of the event.This is description of the event.This is description of the event.This is description of the event.</p>
+              </div>
+                <button href="palash.html" style="color: black;font-size: large; border-radius: 10%; background: #00b1e4; padding: 10px 20px; margin-bottom: 20px; margin-left: 15%; margin-right:15% " >Details</button>
+            </div>
+            <div class="card" style="width: 250px; ">
+              <img src="img/team4.jpg" alt="Avatar" style="width: 50% ; "height= 80%">
+              <div class="container">
+                <h4><b>Jane Doe</b></h4>
+                <p>This is description of the event.This is description of the event.This is description of the event.This is description of the event.</p>
+              </div>
+                <button href="palash.html" style="color: black;font-size: large; border-radius: 10%; background: #00b1e4; padding: 10px 20px; margin-bottom: 20px; margin-left: 15%; margin-right:15% " >Details</button>
+            </div>
+
+        </div>
+
+      </div>
+    </section><!-- #testimonials -->
+
+
+
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Services</h2>
+          <p>This reliable fundrising platform for both donation and seeking help makes Fundraising easier and quicker, to encourage Donation massively by providing reliable platform <f></f>or donating.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+               <div class="icon svgImg"><img src="img/undraw_scrum_board_cesn.svg" alt=""></div>
+              <h4 class="title"><a href="">Verification</a></h4>
+                <p class="description">We provide proper verification of the fundraiser and the people who actually need help by verifying all the necessary documents.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="box wow fadeInLeft">
+              <div class="icon svgImg"><img src="img/undraw_maker_launch_crhe.svg" alt=""></div>
+              <h4 class="title"><a href="">Publication</a></h4>
+              <p class="description">We will provide a platform for publication.<br> As much as people we can reach, we're likely to get more donations.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="box wow fadeInRight">
+               <div class="icon svgImg"><img src="img/undraw_mobile_marketing_iqbr.svg" alt=""></div>
+              <h4 class="title"><a href="">Collection</a></h4>
+              <p class="description">We will provide identifications for volunteers to collect the fund. Or we'll provide volunteers of our own.</p>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+    <section id="clients" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Payment System : </h2>
+          <p>Donate everyday. Do a "Sadkah-e-zariyah" everyday</p>
+        </div>
+
+        <div class="owl-carousel clients-carousel">
+          <img src="img/pay/bkash.png" >
+          <img src="img/pay/mlogo.png" alt="">
+          <img src="img/pay/paypal.jpeg" alt="">
+          <img src="img/pay/mc.png" alt="">
+          <img src="img/pay/fastCash.png" alt="">
+          <img src="img/pay/nexus.jpg" alt="">
+          <img src="img/pay/visa.png" alt="">
+
+             <!--<div class="owl-carousel clients-carousel">-->
+      </div>
+
+
+      </div>
+
+
+
+      </div>
+    </section><!-- #clients -->
+    <!--==========================
+      Testimonials Section
+    ============================-->
+    <section id="testimonials" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Testimonials</h2>
+          <p>This project was for general people. But, for verification of this project, you may like to get review from these guys. </p>
+        </div>
+        <div class="owl-carousel testimonials-carousel">
+
+
+            <div class="testimonial-item">
+              <p>
+               They provide proper verification of the fundraiser and the people who actually need help by verifying all the necessary documents.</p>
+              <h3>Kashob Roy</h3>
+              <h4>Marketing, Samsung</h4>
+            </div>
+           <div class="testimonial-item">
+              <p>
+                They provides a platform for publication.Because, As much as people you can reach, you're likely to get more donations.
+              </p>
+              <h3>Moumita Chowdhuri</h3>
+              <h4>CTO, GrameenPhone</h4>
+            </div>
+           <div class="testimonial-item">
+              <p>
+               They provide identifications for volunteers to collect the fund. I'm one of their volunteers.
+              </p>
+              <h3>Alif Ruslan</h3>
+              <h4>accounts, Helping Hand</h4>
+            </div>
+            <div class="testimonial-item">
+              <p>
+                This project was for general people. We want to actually help people. We wanted people to get free from the hassle of frauds.
+              </p>
+              <h3>H.H. Moon</h3>
+              <h4>President, Helping Hand</h4>
+            </div>
+
+           <div class="testimonial-item">
+              <p>
+               We want to actually help people. We wanted people to get free from the hassle of frauds and collecting fund from door to door.
+              </p>
+              <h3>Mr. Palash Roy</h3>
+              <h4>Treasurer</h4>
+            </div>
+
+            <div class="testimonial-item">
+              <p>
+                I used this platform to raise fund for my friend. this platform is actually very helpfull. I'm thankfull to the people behind this great initiative.
+              </p>
+              <h3>Fahim Arefin</h3>
+              <h4>Talent somproday</h4>
+            </div>
+
+        </div>
+
+      </div>
+    </section><!-- #testimonials -->
+
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Get Our Service</h3>
+            <p class="cta-text">valo valo kotha</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#contact">Contact Us</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #call-to-action -->
+
+
+  </main>
+
+
+<div class="modal fade" id="userNewApplication" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content modal-popup">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h3 class="white">Apply for Permission</h3>
+					<form action="" method="get" class="popup-form">
+						<input type="text" id="eventTitle" class="form-control form-white" placeholder="Event Title" value="">
+						<input type="text" id="personName" class="form-control form-white" placeholder="Person Name" value="Polluu">
+						<input type="text" id="personAddress" class="form-control form-white" placeholder="Person Address" value="Pal123@gmail.com">
+                        <input type="text" id="personAge" class="form-control form-white" placeholder="Person age">
+						<li class="text-info">Gender:</li>
+						<input type="radio" id="personMale" name="gender" value="male"> Male
+						<input type="radio" id="personFemale" name="gender" value="female"> Female
+						<input type="text" id="personNumber" class="form-control form-white" placeholder="Contact Number" value="0186712345">
+						<input type="text" id="personReasonCatagory" class="form-control form-white" placeholder="Fund Needed for...." value="">
+                        <input type="text" id="personReasonDes" class="form-control form-white" placeholder="Reason in Details" value="">
+                        <input type="text" id="personRequiredAmount" class="form-control form-white" placeholder="Amount in BDT" value="10000">
+                        <input type="date" id="personDeadline" class="form-control form-white" placeholder="Fund Raising Deadline" value="">
+                        <input type="button" value="Submit" onclick ="submitted();">
+                        <input type="button" value="Save as Draft" onclick ="saveAsDraft();">
+
+
+					</form>
+
+
+					<script src="js/user.js"></script>
+				</div>
+			</div>
+		</div>
+
+<div name="application_id" id="application_id" style="margin-top: 10px"></div>
+  <script>
+    function unique() {
+      return Math.random().toString(36).substr(5, 7);
+    };
+    var ID = unique();
+    application_id.innerHTML = ID;
+  </script>
+
+<div class="modal fade" id="userPreviousSubmittedApplication" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content modal-popup">
+                  <script src="js/previousApplication.js"></script>
+				</div>
+			</div>
+		</div>
+
+  <div class="modal fade" id="editApplication" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content modal-popup">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h3 class="white">Edit Application</h3>
+
+                        <form action="" method="get" class="popup-form">
+						<input type="text" id="updateeventTitle" class="form-control form-white" placeholder="Event Title" value="">
+						<input type="text" id="updatepersonName" class="form-control form-white" placeholder="Person Name" value="Polluu">
+						<input type="text" id="updatepersonAddress" class="form-control form-white" placeholder="Person Address" value="">
+                        <input type="text" id="updatepersonAge" class="form-control form-white" placeholder="Person age">
+						<li class="text-info">Gender:</li>
+						<input type="radio" id="updatepersonMale" name="gender" value="male"> Male
+						<input type="radio" id="updatepersonFemale" name="gender" value="female"> Female
+						<input type="text" id="updatepersonNumber" class="form-control form-white" placeholder="Contact Number" value="0186712345">
+						<input type="text" id="updatepersonReasonCatagory" class="form-control form-white" placeholder="Fund Needed for...." value="">
+                        <input type="text" id="updatepersonReasonDes" class="form-control form-white" placeholder="Reason in Details" value="">
+                        <input type="text" id="updatepersonRequiredAmount" class="form-control form-white" placeholder="Amount in BDT" value="10000">
+                        <input type="date" id="updatepersonDeadline" class="form-control form-white" placeholder="Fund Raising Deadline" value="">
+                        <input type="button" value="UPDATE" onclick="updateApplication();">
+						<script src="js/previousApplication.js"></script>
+                        </form>
+				</div>
+			</div>
+  </div>
+            <div id="sub_application_card" class="card" style="width: 250px; ">
+              <!--<img src="img/team1.jpg" alt="Avatar" style="width: 50% ; "height= 80%">-->
+              <!--<div class="container">-->
+                <!--<h4><b>Event Title</b></h4>-->
+                  <!--<h5><b>Patient Name</b></h5>-->
+                <!--<p>This is <descriptio></descriptio>n of the event.This is description of the event.This is description of the event.This is description of the event.</p>-->
+              <!--</div>-->
+                <!--<button href="palash.html" style="color: black;font-size: large; border-radius: 10%; background: #00b1e4; padding: 10px 20px; margin-bottom: 20px; margin-left: 15%; margin-right:15% " >Details</button>-->
+            </div>
+
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+   <div class="container">
+      <div class="copyright">
+        Copyright 2019 © All rights reserved.
+      </div>
+      <div class="credits">
+        Design & Developed by <a href="https://webthemez.com">WebThemez</a> Find More <a href="https://webthemez.com/free-bootstrap-templates/" target="_blank">Bootstrap Templates</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript  -->s
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
+ <script src="contact/jqBootstrapValidation.js"></script>
+ <script src="contact/contact_me.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
